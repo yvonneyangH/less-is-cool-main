@@ -1,0 +1,24 @@
+nav{
+
+  height: @mobileHeight;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  background-color: @sideColor;
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+
+  @media screen and (min-width: @desktop) {
+    height: @desktopHeight;
+  }
+
+  //&:hover{
+  //  background-color: #d7001c;
+  //}
+
+
+}
