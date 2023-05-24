@@ -36,17 +36,20 @@ function App() {
 
     return (
         <div>
-            <nav>
-                <h1><Link to='/'>Acme Todos ({todos.length})!!</Link></h1>
-                <Link to='/create'>Create A Todo</Link>
-                {' '}
-                <Link to='/categories/create'>Create A Category</Link>
-            </nav>
-            <Routes>
-                <Route path='/' element={<Search/>}/>
-                <Route path='/search/:term' element={<Search/>}/>
-            </Routes>
-
+        <nav>
+            <h1><Link to='/'>Acme Todos ({todos.length})!!</Link></h1>
+            <div className='menu'>
+            <Link to='/create'>Create A Todo</Link>
+            {' '}
+            <Link to='/categories/create'>Create A Category</Link>
+            </div>
+        
+        <Routes>
+            <Route path='/' element={<Search/>}/>
+            <Route path='/search/:term' element={<Search/>}/>
+        </Routes>
+        </nav>
+        <div className ="listContainer">
             <Routes>
                 <Route path='/' element={<Todos/>}/>
                 <Route path='/search/:term' element={<Todos/>}/>
@@ -54,8 +57,10 @@ function App() {
                 <Route path='/create' element={<TodoCreate/>}/>
                 <Route path='/categories/create' element={<CategoryCreate/>}/>
             </Routes>
-            <Categories/>
+            <Categories className="categories"/>
         </div>
+       
+    </div>
     );
 }
 

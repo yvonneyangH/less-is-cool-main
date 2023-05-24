@@ -21,7 +21,7 @@ const Todos = ()=> {
           filtered.map( todo => {
             const category = categories.find(category => category.id === todo.categoryId);
             return (
-              <li key={ todo.id }>
+              <li key={ todo.id } className="todoList">
                 <Link to={`/${todo.id}`}>
                   { todo.name }
                 </Link>

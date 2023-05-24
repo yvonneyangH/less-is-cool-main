@@ -1,24 +1,45 @@
 nav{
-
-  height: @mobileHeight;
+  height: 200px;
   width: 100%;
-  position: fixed;
   z-index: 99;
-  background-color: @sideColor;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+
+
 
   a{
     text-decoration: none;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h1{
+    text-align: center;
+    margin: 1rem;
+    font-size: 40px;
   }
 
+  .menu{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    width: 100%;
+  }
+  input{
+    flex:1;
+    width: 600px;
+    margin: 1rem;
+    
+  }
 
   @media screen and (min-width: @desktop) {
     height: @desktopHeight;
   }
 
-  //&:hover{
-  //  background-color: #d7001c;
-  //}
+  &:hover{
+    background-color: #E63946;
+  }
 
 
 }

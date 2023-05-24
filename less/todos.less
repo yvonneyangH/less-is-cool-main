@@ -2,14 +2,53 @@ ul{
   list-style: none;
 }
 
+.listContainer {
+  display: flex;
+  margin-top: 0px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
 li{
   background-color: @sideColor;
-  color: white;
-  .grow(200px);
-  min-width: 100px;
-  max-width: 500px;
+  color: #1D3557;
+  .grow(100px);
+  .padd(10px);
   .flexer(row);
-  .padd(36px);
   margin: 8px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  select {
+    .box(#fff, 100%, auto);
+  }
 
+  button {
+    margin-left: 5px;
+    padding: 8px 10px;
+    border: 0;
+    background-color: @buttonBorderColor;
+    border-radius: 2px;
+    cursor: pointer;
+
+  }
+  button:active {
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    top: 3px;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+  }
+}
+
+
+
+.todoList {
+  display: flex;
+  
 }
